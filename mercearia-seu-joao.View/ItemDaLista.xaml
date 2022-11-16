@@ -1,0 +1,49 @@
+﻿<Window x:Class="mercearia_seu_joao.View.ItemDaLista"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mercearia_seu_joao.View"
+        mc:Ignorable="d"
+        Title="ItemDaLista" Height="515" Width="413"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid Background="#FF3C096C">
+        <Rectangle HorizontalAlignment="Center" Height="42" Stroke="Black" VerticalAlignment="Top" Width="784" Fill="#FF5A189A"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="736,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,-0.084" Height="30" Width="30" Background="#FFFFC90E" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,11,0,0" TextWrapping="Wrap" Text="Item Da Lista" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="35" Width="123" Foreground="#FFFFC90E" FontSize="16" FontFamily="Cascadia Code" FontWeight="Bold">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.811"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Quantidade      " VerticalAlignment="Top" Width="118" Height="32" Margin="108,294,0,0" FontSize="16" Foreground="#FFFFC90E" FontFamily="Cascadia Code"/>
+        <TextBox x:Name="Tbx_id" HorizontalAlignment="Center" Margin="0,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="39" Background="White" FontSize="18" BorderBrush="#FF3C096C" SelectionBrush="White" IsReadOnly="True" VerticalContentAlignment="Center" FontFamily="Cascadia Code"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" ID Produto" VerticalAlignment="Top" Width="196" Height="32" Margin="102,99,0,0" FontSize="16" Foreground="#FFFFC90E" FontFamily="Cascadia Code"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="196" Height="27" Margin="0,197,0,0" FontSize="16" Foreground="#FFFFC90E" FontFamily="Cascadia Code"/>
+        <TextBox x:Name="Tbx_nome" HorizontalAlignment="Center" Margin="0,224,0,0" VerticalAlignment="Top" Width="196" Height="37" BorderBrush="White" Background="White" FontSize="18" SelectionBrush="White" IsReadOnly="True" VerticalContentAlignment="Center" FontFamily="Cascadia Code"/>
+        <TextBox x:Name="Tbx_qtd" HorizontalAlignment="Center" Margin="0,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="39" Background="White" FontSize="18" BorderBrush="White" SelectionBrush="White" PreviewTextInput="PreviewTextInput" VerticalContentAlignment="Center" FontFamily="Cascadia Code"/>
+        <Button x:Name="Btn_Minimizar" Content="-" HorizontalAlignment="Left" Margin="322,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,-0.084" Height="30" Width="30" Background="#FFFFC90E" FontSize="20" FontFamily="Cascadia Code" Click="Minimizar"/>
+        <Button x:Name="Btn_Fechar" Content="x" HorizontalAlignment="Left" Margin="369,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,-0.084" Height="30" Width="30" Background="#FFFFC90E" FontSize="20" FontFamily="Cascadia Code" Click="Fechar"/>
+        <Button x:Name="Btn_Alterar" Content="Alterar" HorizontalAlignment="Left" Height="53" Margin="72,398,0,0" VerticalAlignment="Top" Width="111" FontSize="19" Background="#FF5A189A" Foreground="White" FontWeight="Bold" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#FF5A189A" FontFamily="Cascadia Code">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_Excluir" Content="Excluir" HorizontalAlignment="Left" Height="53" Margin="233,398,0,0" VerticalAlignment="Top" Width="119" FontSize="19" Background="#FF5A189A" Foreground="White" FontWeight="Bold" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#FF5A189A" FontFamily="Cascadia Code">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

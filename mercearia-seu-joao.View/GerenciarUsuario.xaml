@@ -1,0 +1,68 @@
+﻿<Window x:Class="mercearia_seu_joao.View.GerenciarUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mercearia_seu_joao.View"
+        mc:Ignorable="d"
+        Title="GerenciarUsuario" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid Background="#FF3C096C">
+        <TextBlock x:Name="Nome_TipoUsuario" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tipo Usuário" VerticalAlignment="Top" Width="98" Height="32" Margin="127,50,0,0" FontSize="16" Background="#FF3C096C" Foreground="#FFFFC90E"/>
+
+        <TextBlock x:Name="Nome_ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="32" Height="28" Margin="24,54,0,0" FontSize="16" Background="#FF3C096C" Foreground="#FFFFC90E"/>
+
+        <Rectangle HorizontalAlignment="Center" Height="43" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="#FF5A189A"/>
+        <Button x:Name="btnMinimize" Content="-" HorizontalAlignment="Left" Margin="674,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,-0.084" Height="30" Width="30" Background="#FFFFC90E" FontSize="20" Click="clickMinimize"/>
+        <Button x:Name="btnSair" Content="x" HorizontalAlignment="Left" Margin="727,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,-0.084" Height="30" Width="30" Background="#FFFFC90E" FontSize="20" Click="ClickSair"/>
+        <TextBlock x:Name="Nome_Gerenciar" HorizontalAlignment="Left" Margin="26,11,0,0" TextWrapping="Wrap" Text="Gerenciar Usuário" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="35" Width="131" Foreground="#FFFFC90E" FontSize="16">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.811"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="Nome_Email" HorizontalAlignment="Left" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="84" Height="32" Margin="24,174,0,0" FontSize="16" Background="#FF3C096C" Foreground="#FFFFC90E"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="24,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Height="39" Background="#FF5A189A" FontSize="16" Foreground="#FFFFC90E" BorderBrush="#FF3C096C" IsHitTestVisible="False" />
+        <TextBlock x:Name="Nome_Nome" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="48" Height="20" Margin="24,117,0,0" FontSize="16" Foreground="#FFFFC90E"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="24,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="196" Height="39" Background="#FF5A189A" FontSize="16" Foreground="#FFFFC90E" BorderBrush="#FF3C096C" />
+        <TextBlock x:Name="Nome_Senha" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="196" Height="32" Margin="24,237,0,0" FontSize="16" Foreground="#FFFFC90E"/>
+        <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="24,264,0,0" VerticalAlignment="Top" Width="196" Height="37" BorderBrush="#FF5A189A" Background="#FF5A189A" FontSize="16" />
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="24,368,0,0" VerticalAlignment="Top" Width="106" Height="32" Background="#FFFFC90C" BorderBrush="#FF3C096C" Foreground="#FF3C096C" Click="ClickExcluir"/>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="130,400,0,0" VerticalAlignment="Top" Width="106" Height="32" Background="#FFFFC90C" Foreground="#FF3C096C" BorderBrush="#FF3C096C" Click="ClickAlterar"/>
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="130,368,0,0" VerticalAlignment="Top" Width="106" Height="32" Background="#FFFFC90C" Foreground="#FF3C096C" BorderBrush="#FF3C096C" Click="ClickLimpar"/>
+        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="24,400,0,0" VerticalAlignment="Top" Width="106" Height="32" Background="#FFFFC90C" BorderBrush="#FF3C096C" Foreground="#FF3C096C" Click="ClickNovo"/>
+        <ComboBox x:Name="BoxTipo" HorizontalAlignment="Left" Margin="127,78,0,0" VerticalAlignment="Top" Width="125" Height="39" Background="#FF3C096C" BorderBrush="#FF3C096C" Foreground="#FF3C096C" FontSize="22" >
+            <ComboBoxItem Content="Gerente" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBoxItem Content="Caixa" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </ComboBox>
+        <TextBlock x:Name="Nome_ConfirmSenha" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirmar Senha" VerticalAlignment="Top" Width="196" Height="32" Margin="24,301,0,0" FontSize="16" Foreground="#FFFFC90E"/>
+        <PasswordBox x:Name="txtSenha_C" HorizontalAlignment="Left" Margin="24,324,0,0" VerticalAlignment="Top" Width="196" Height="38" BorderBrush="#FF5A189A" Background="#FF5A189A" FontSize="16"/>
+        <Image HorizontalAlignment="Left" Height="158" Margin="682,331,0,0" VerticalAlignment="Top" Width="160" Source="/pixil-frame-EduckSorriso.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-39.971"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="24,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="37" Background="#FF5A189A" FontSize="16" Foreground="#FFFFC90E" BorderBrush="#FF3C096C" />
+        <DataGrid x:Name="dgvUsuarios" HorizontalAlignment="Left" Height="333" Margin="271,68,0,0" VerticalAlignment="Top" Width="428"  Background="#FFFFC90C" BorderBrush="#FFFFC90C" OpacityMask="#FFFFC90C" Foreground="#FF3C096C" MouseDoubleClick="PegarItemNoGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Header="Id" />
+                <DataGridTextColumn Binding="{Binding nome}" Header="Nome"/>
+                <DataGridTextColumn Binding="{Binding email}" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding senha}" Header="Senha"/>
+                <DataGridTextColumn Binding="{Binding tipo}" Header="Tipo"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
